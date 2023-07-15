@@ -37,3 +37,7 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+#root {
+  background-color: beige;
+  padding: 20px;
+}

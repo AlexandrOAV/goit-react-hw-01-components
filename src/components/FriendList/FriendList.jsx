@@ -1,8 +1,10 @@
+import { Container } from 'components/App.styled';
 import PropTypes from 'prop-types';
 const FriendList = ({ friends }) => {
     
     return (
       <section className="friends-list">
+        <Container>
         <ul>
             {friends.map(({ id, avatar, name, isOnline})=>{
                 return (<li key={id} className="item">
@@ -11,8 +13,10 @@ const FriendList = ({ friends }) => {
                     <p className="name">{name}</p>
             </li>)
             })}
-        </ul>
-        </section>
+          </ul>
+          </Container>
+      </section>
+     
     );
 };
 FriendList.propTypes = {

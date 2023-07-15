@@ -1,19 +1,36 @@
+import { Container } from 'components/App.styled';
 import PropTypes from 'prop-types'
+import {
+  Label,
+  Percentage,
+  StatisticsDiv,
+  StatisticsItem,
+  StatisticsList,
+  StatisticsSection,
+  StatisticsTitle
+} from './Statistics.styled';
+
 const Statistics = ({ stats, title }) => {
   return (
-    < section className="statistics container" >
-      {title && <h2 className="title">{title}</h2>}
-      <ul className="stat-list">
+    < StatisticsSection>
+      <Container>
+        <StatisticsDiv>
+          {title && <StatisticsTitle>{title}</StatisticsTitle>}
+      <StatisticsList>
         {stats.map(({id, label, percentage}) => {
           return (
-            <li key={id} className="item">
-              <span className="label">{label}</span>
-              <span className="percentage"> {percentage}</span>
-            </li>
+            <StatisticsItem key={id} className="item">
+              <Label >{label}</Label>
+              <Percentage> {percentage}%</Percentage>
+            </StatisticsItem>
           )
         })}
-      </ul>
-    </section>
+      </StatisticsList>
+        </StatisticsDiv>
+      
+       </Container>
+    </StatisticsSection>
+   
   )
 };
 Statistics.propTypes = {

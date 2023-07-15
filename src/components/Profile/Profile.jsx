@@ -1,6 +1,6 @@
+import { Container } from 'components/App.styled';
 import PropTypes from 'prop-types';
 import {
-  Container,
   Label,
   ProfileAvatar,
   ProfileDiscription,

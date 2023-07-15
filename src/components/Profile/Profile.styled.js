@@ -1,19 +1,14 @@
 import styled from 'styled-components';
-export const Container = styled.div`
-  width: 100%;
-  max-width: 250px;
-  margin: 0 auto;
-  padding: 20px;
-   display: flex;
-  flex-direction: column;
-  gap: 20px;
-  font-family: 'Roboto', sans-serif;
-  font-size: 16px;
-`
+
 export const ProfileDiv = styled.div`
+  max-width:250px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  margin: 0 auto;
+  margin-bottom:10px;
+  text-align: center;
   border: 2px solid #ccc;
   border-radius: 8px;
   background-color: #ffffff;
@@ -21,11 +16,12 @@ export const ProfileDiv = styled.div`
 `;
 export const ProfileDiscription = styled.div`
   display: flex;
+  padding: 5px;
   flex-direction: column;
   gap: 10px;
   align-items: center;
-  margin-bottom: 20px;
   color:  #000000;
+ 
 `;
 export const ProfileAvatar = styled.img`
   width: 100px;
