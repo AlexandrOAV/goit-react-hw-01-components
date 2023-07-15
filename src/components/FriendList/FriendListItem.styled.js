@@ -22,8 +22,8 @@ box-shadow: 0px 0px 10px 3px rgba(0,21,255,1);
 
 export const Status = styled.span` 
 border-radius: 50%;
-width: 28px;
-height: 28px;
+width: 10px;
+height: 10px;
 background-color: ${({ status }) => status ? '#00FF00' : '#FF0000'};
 `
 export const Name = styled.p`
