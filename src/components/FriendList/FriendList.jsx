@@ -1,22 +1,22 @@
 import { Container } from 'components/App.styled';
 import PropTypes from 'prop-types';
+import {
+  FriendSection,
+  FriendsUl,
+} from './FriendList.styled';
+import FriendListItem from './FriendListItem';
 const FriendList = ({ friends }) => {
-    
     return (
-      <section className="friends-list">
+      <FriendSection>
         <Container>
-        <ul>
-            {friends.map(({ id, avatar, name, isOnline})=>{
-                return (<li key={id} className="item">
-                    {isOnline?(<span className="status on-line">ONLINE</span>):(<span className="status off-line">OFFLINE</span>)}
-  <img className="avatar" src={avatar} alt="User avatar" width="48" />
-                    <p className="name">{name}</p>
-            </li>)
-            })}
-          </ul>
+          <FriendsUl>
+         {friends.map(({ id, avatar, name, isOnline }) => (
+           <FriendListItem key={id} avatar={avatar} name={name} status={isOnline}  />
+    ))}
+          </FriendsUl>
           </Container>
-      </section>
-     
+      </FriendSection>
+
     );
 };
 FriendList.propTypes = {

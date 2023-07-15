@@ -22,7 +22,6 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
- 
 }
 body {
   margin: 0;
@@ -39,5 +38,5 @@ code {
 }
 #root {
   background-color: beige;
-  padding: 20px;
+  padding: 10px;
 }

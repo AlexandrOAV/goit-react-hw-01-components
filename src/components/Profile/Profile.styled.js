@@ -46,7 +46,6 @@ export const Stats = styled.ul`
 display: flex;
 justify-content: space-around;
 text-align: center;
-/* gap:10px; */
 width: 100%;
 margin-top: 5px;
 font-size:18px;
