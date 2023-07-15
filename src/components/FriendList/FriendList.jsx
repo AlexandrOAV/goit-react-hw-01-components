@@ -13,24 +13,15 @@ const FriendList = ({ friends }) => {
         </section>
     );
 };
-// FriendList.propTypes = {
-//   friends: PropTypes.arrayOf(
-//     PropTypes.exact({
-//       avatar: PropTypes.string.isRequired,
-//       id: PropTypes.number.isRequired,
-//       isOnline: PropTypes.bool.isRequired,
-//       name: PropTypes.string.isRequired,
-//     })
-//   ),
-// };
-// FriendList.PropTypes = {
-//     friends: PropTypes.arrayOf(
-//         PropTypes.exact({
-//             id: PropTypes.number.isRequired,
-//             avatar: PropTypes.string.isRequired,
-//             name: PropTypes.string.isRequired,
-//             isOnline: PropTypes.bool.isRequired,
-//         })
-//     ),
-// };
+FriendList.propTypes = {
+  friends: PropTypes.arrayOf(
+    PropTypes.exact({
+      avatar: PropTypes.string.isRequired,
+      id: PropTypes.number.isRequired,
+      isOnline: PropTypes.bool.isRequired,
+      name: PropTypes.string.isRequired,
+    })
+  ),
+};
+
 export default FriendList;
