@@ -28,4 +28,5 @@ export const TbodyTr = styled.tr`
 &:nth-child(odd){
     background-color:#C0E8D5;}
 padding: 10px;
-height: 35px;`
+height: 35px;
+font-weight: 600;`
