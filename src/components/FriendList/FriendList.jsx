@@ -2,14 +2,16 @@ import PropTypes from 'prop-types';
 const FriendList = ({ friends }) => {
     
     return (
-        <section className="friends-list">
+      <section className="friends-list">
+        <ul>
             {friends.map(({ id, avatar, name, isOnline})=>{
                 return (<li key={id} className="item">
                     {isOnline?(<span className="status on-line">ONLINE</span>):(<span className="status off-line">OFFLINE</span>)}
   <img className="avatar" src={avatar} alt="User avatar" width="48" />
                     <p className="name">{name}</p>
             </li>)
-})}
+            })}
+        </ul>
         </section>
     );
 };

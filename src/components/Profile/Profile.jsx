@@ -1,37 +1,49 @@
 import PropTypes from 'prop-types';
+import {
+  Container,
+  Label,
+  ProfileAvatar,
+  ProfileDiscription,
+  ProfileDiv,
+  ProfileLocation,
+  ProfileName,
+  ProfileTag,
+  Quantity,
+  Stats
+} from './Profile.styled';
 const Profile = ({user}) => {
   const { avatar, username, tag, location, stats } = user;
   return (
-    <section className="profile">
-        <div className="profile">
-  <div className="description">
-    <img
+  <Container>
+  <ProfileDiv >
+  <ProfileDiscription>
+    <ProfileAvatar
       src={avatar}
       alt="User avatar"
-      className="avatar"
     />
-    <p className="name">{username}</p>
-    <p className="tag">@{tag}</p>
-    <p className="location">{location}</p>
-  </div>
+    <ProfileName >{username}</ProfileName>
+    <ProfileTag>@{tag}</ProfileTag>
+    <ProfileLocation>{location}</ProfileLocation>
+  </ProfileDiscription>
 
-  <ul className="stats">
+  <Stats>
     <li>
-      <span className="label">Followers</span>
-      <span className="quantity">{stats.followers}</span>
+      <Label >Followers</Label>
+      <Quantity className="quantity">{stats.followers}</Quantity>
     </li>
     <li>
-      <span className="label">Views</span>
-      <span className="quantity">{stats.views}</span>
+      <Label >Views</Label>
+      <Quantity className="quantity">{stats.views}</Quantity>
     </li>
     <li>
-      <span className="label">Likes</span>
-      <span className="quantity">{stats.likes}</span>
+      <Label >Likes</Label>
+      <Quantity className="quantity">{stats.likes}</Quantity>
     </li>
-  </ul>
-</div>
-   </section>)
+  </Stats>
+</ProfileDiv >
+   </Container>)
 };
+
 Profile.propTypes = {
   user: PropTypes.exact({
     username: PropTypes.string.isRequired,
