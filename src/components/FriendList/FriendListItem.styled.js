@@ -24,7 +24,7 @@ export const Status = styled.span`
 border-radius: 50%;
 width: 10px;
 height: 10px;
-background-color: ${({ status }) => status ? '#00FF00' : '#FF0000'};
+background-color: ${({ status }) => status==='online' ? '#00FF00' : '#FF0000'};
 `
 export const Name = styled.p`
 font-size: 24px;

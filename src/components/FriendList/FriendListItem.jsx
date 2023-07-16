@@ -9,7 +9,7 @@ import PropTypes from 'prop-types';
 const FriendListItem = ({ avatar, name, status }) => {
     return (
     <FriendsLi>
-            <Status status={status}></Status>
+            <Status status={status?'online':'offline'}></Status>
       <FriendAvatar src={avatar} alt="User avatar" width="48" />
       <Name>{name}</Name>
     </FriendsLi>
