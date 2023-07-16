@@ -4,7 +4,7 @@ import {
   FriendSection,
   FriendsUl,
 } from './FriendList.styled';
-import FriendListItem from './FriendListItem';
+import FriendListItem from '../FriendListItem/FriendListItem';
 const FriendList = ({ friends }) => {
     return (
       <FriendSection>
